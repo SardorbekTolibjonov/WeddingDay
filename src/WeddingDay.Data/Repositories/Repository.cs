@@ -13,7 +13,7 @@ namespace WeddingDay.Data.Repositories
         {
             if (typeof(TEntity) == typeof(Booking))
                 this.Path = DatabasesPath.BookingDb;
-            else if(typeof(TEntity) == typeof(Client))
+            else if(typeof(TEntity) == typeof(ClientForCreationDto))
                 this.Path = DatabasesPath.ClientDb;
             else if(typeof(TEntity) == typeof(Payment))
                 this.Path = DatabasesPath.PaymentDb;

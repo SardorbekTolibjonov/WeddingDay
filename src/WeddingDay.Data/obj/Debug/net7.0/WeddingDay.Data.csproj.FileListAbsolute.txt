@@ -1,0 +1,5 @@
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.csproj.AssemblyReference.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.AssemblyInfoInputs.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.AssemblyInfo.cs
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.csproj.CoreCompileInputs.cache

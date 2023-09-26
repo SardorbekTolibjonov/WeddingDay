@@ -7,7 +7,7 @@ namespace WeddingDay.Service.Interfaces
     {
         public Task<BookingForResultDto> CreateAsync(BookingForCreationDto dto);
         public Task<BookingForResultDto> UpdateAsync(BookingForUpdateDto dto);
-        public Task<bool> DeleteAsync(long id);
+        public Task<bool> RemoveAsync(long id);
         public Task<BookingForResultDto> GetByIdAsync(long id);
         public Task<List<BookingForResultDto>> GetAllAsync();
     }

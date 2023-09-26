@@ -1,0 +1,11 @@
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\bin\Debug\net7.0\WeddingDay.Domain.deps.json
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\bin\Debug\net7.0\WeddingDay.Domain.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\bin\Debug\net7.0\WeddingDay.Domain.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.AssemblyInfoInputs.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.AssemblyInfo.cs
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.csproj.CoreCompileInputs.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\refint\WeddingDay.Domain.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\WeddingDay.Domain.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Domain\obj\Debug\net7.0\ref\WeddingDay.Domain.dll

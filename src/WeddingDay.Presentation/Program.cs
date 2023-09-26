@@ -1,10 +1,13 @@
-﻿namespace WeddingDay.Presentation
+﻿using WeddingDay.Presentation.UI;
+
+namespace WeddingDay.Presentation
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            WeddingDayUI ui = new WeddingDayUI();
+            ui.RunCodeAsync();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿namespace WeddingDay.Domain.Commons
+﻿
+namespace WeddingDay.Domain.Commons
 {
     public class Auditable
     {
