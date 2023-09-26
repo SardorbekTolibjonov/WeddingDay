@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeddingDay.Service.DTOs.WeddingDtos
+﻿namespace WeddingDay.Service.DTOs.WeddingDtos
 {
-    internal class WeddingForUpdateDto
+    public class WeddingForUpdateDto
     {
+        public long Id { get; set; }
+        public string Address { get; set; }
+        public decimal Cost { get; set; }
     }
 }

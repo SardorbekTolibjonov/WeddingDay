@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7/3PJ3K8VCO3hlKXm46wrioEKUX6Ltl2FgLrEwysnrYH40+Gbmp7wSae7QE+WuA3Ws0Dy2KIZRTCJlfOA0kO1A==",
+  "dgSpecHash": "0AfqptBuRxZ++ACRrNJfoPTFdauI9wO+8/PZDd6SbCxSfUtHmNeum49XHxHV4B6uP8xq2DqkNzn3zsqMmG9Anw==",
   "success": true,
   "projectFilePath": "D:\\visual studio c#\\Amalyot\\WeddingDay\\src\\WeddingDay.Service\\WeddingDay.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sardorbek\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

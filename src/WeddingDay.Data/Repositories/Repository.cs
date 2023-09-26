@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
-using WeddingDay.Domain.Configurations;
+using WeddingDay.Domain.Commons;
 using WeddingDay.Domain.Entities;
+using WeddingDay.Data.IRepositories;
+using WeddingDay.Domain.Configurations;
 
 namespace WeddingDay.Data.Repositories
 {
-    public class Repository<TEntity> : IRepositoriy<TEntity> where TEntity : Auditable
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditable
     {
         private readonly string Path;
         public Repository() 
@@ -23,14 +25,26 @@ namespace WeddingDay.Data.Repositories
             if (string.IsNullOrEmpty(str))
                 File.WriteAllText(Path, "[]");
         }
-        public Task<bool> DeleteAsync(long id)
+
+        public async Task<bool> DeleteAsync(long id)
         {
-            throw new NotImplementedException();
+            var entities = await SelectAllAsync();
+            var data = await SelectByIdAsync(id);
+            entities.Remove(data);
+            var result = JsonConvert.SerializeObject(entities, Newtonsoft.Json.Formatting.Indented);
+            await File.WriteAllTextAsync(Path, result);
+
+            return true;
         }
 
-        public Task<TEntity> InsertAsync(TEntity entity)
+        public async Task<TEntity> InsertAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            var entities = await SelectAllAsync();
+            entities.Add(entity);
+            var result = JsonConvert.SerializeObject(entities, Newtonsoft.Json.Formatting.Indented);
+            await File.WriteAllTextAsync(Path, result);
+
+            return entity;
         }
 
         public async Task<List<TEntity>> SelectAllAsync()
@@ -42,13 +56,24 @@ namespace WeddingDay.Data.Repositories
 
         public async Task<TEntity> SelectByIdAsync(long id)
         {
-            var data = (await SelectAllAsync()).FirstOrDefault(e => e.);
-
+            return (await SelectAllAsync()).FirstOrDefault(e => e.Id == id);
         }
 
-        public Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            var entities = await SelectAllAsync();
+            await File.WriteAllTextAsync(Path, "[]");
+
+            foreach (var data in entities)
+            {
+                if (data.Id == entity.Id)
+                {
+                    await InsertAsync(entity);
+                    continue;
+                }
+                await InsertAsync(data);
+            }
+            return entity;
         }
     }
 }

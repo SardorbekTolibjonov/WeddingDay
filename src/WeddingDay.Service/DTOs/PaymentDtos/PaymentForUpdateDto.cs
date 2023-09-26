@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeddingDay.Service.DTOs.PaymentDtos
+﻿namespace WeddingDay.Service.DTOs.PaymentDtos
 {
-    internal class PaymentForUpdateDto
+    public class PaymentForUpdateDto
     {
+        public long Id { get; set; }
+        public decimal Amount { get; set; }
     }
 }

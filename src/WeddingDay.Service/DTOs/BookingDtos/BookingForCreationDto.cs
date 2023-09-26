@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeddingDay.Service.DTOs.BookingDtos
+﻿namespace WeddingDay.Service.DTOs.BookingDtos
 {
-    internal class BookingForCreationDto
+    public class BookingForCreationDto
     {
+        public long ClientId { get; set; }
+        public DateTime WeddingDate { get; set; }
+        public decimal Cost { get; set; }
+        public string Singers { get; set; }
+        public string WeddingAddress { get; set; }
     }
 }

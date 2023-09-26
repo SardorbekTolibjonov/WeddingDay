@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeddingDay.Service.DTOs.SingerDtos
+﻿namespace WeddingDay.Service.DTOs.SingerDtos
 {
-    internal class SingerForCreationDto
+    public class SingerForCreationDto
     {
+        public string Name { get; set; }
+        public decimal Charge { get; set; }
     }
 }
