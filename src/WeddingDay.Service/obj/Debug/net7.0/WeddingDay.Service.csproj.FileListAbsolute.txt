@@ -3,3 +3,15 @@ D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\W
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.AssemblyInfoInputs.cache
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.AssemblyInfo.cs
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.csproj.CoreCompileInputs.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Service.deps.json
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Service.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Service.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Data.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Domain.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Data.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\bin\Debug\net7.0\WeddingDay.Domain.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.csproj.CopyComplete
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\refint\WeddingDay.Service.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\WeddingDay.Service.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Service\obj\Debug\net7.0\ref\WeddingDay.Service.dll

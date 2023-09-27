@@ -1,1 +1,102 @@
-﻿
+﻿[
+  {
+    "Id": 1,
+    "Name": "Sharof Muqimov",
+    "Fee": 1000.0
+  },
+  {
+    "Id": 2,
+    "Name": "Sarvar Nazarov",
+    "Fee": 800.0
+  },
+  {
+    "Id": 3,
+    "Name": "Ozodbek Nazarbekov",
+    "Fee": 1200.0
+  },
+  {
+    "Id": 4,
+    "Name": "Dilfuza Ismoilova",
+    "Fee": 950.0
+  },
+  {
+    "Id": 5,
+    "Name": "Farrux Xamrayev",
+    "Fee": 900.0
+  },
+  {
+    "Id": 6,
+    "Name": "Sevara Nazarxon",
+    "Fee": 1100.0
+  },
+  {
+    "Id": 7,
+    "Name": "Shahzoda",
+    "Fee": 700.0
+  },
+  {
+    "Id": 8,
+    "Name": "Jonli Izz",
+    "Fee": 1300.0
+  },
+  {
+    "Id": 9,
+    "Name": "Rayhon",
+    "Fee": 1000.0
+  },
+  {
+    "Id": 10,
+    "Name": "Yulduz Usmonova",
+    "Fee": 950.0
+  },
+  {
+    "Id": 11,
+    "Name": "Sogdiana",
+    "Fee": 800.0
+  },
+  {
+    "Id": 12,
+    "Name": "Botir Qodirov",
+    "Fee": 1200.0
+  },
+  {
+    "Id": 13,
+    "Name": "Shoxruz Abadiya",
+    "Fee": 1100.0
+  },
+  {
+    "Id": 14,
+    "Name": "Gulmira",
+    "Fee": 700.0
+  },
+  {
+    "Id": 15,
+    "Name": "Feruza Abdullayeva",
+    "Fee": 950.0
+  },
+  {
+    "Id": 16,
+    "Name": "Aziza Nizamova",
+    "Fee": 1000.0
+  },
+  {
+    "Id": 17,
+    "Name": "Jamshid",
+    "Fee": 850.0
+  },
+  {
+    "Id": 18,
+    "Name": "Asalxo'jayeva",
+    "Fee": 900.0
+  },
+  {
+    "Id": 19,
+    "Name": "Davron Kabulov",
+    "Fee": 1100.0
+  },
+  {
+    "Id": 20,
+    "Name": "Otabek Mutalxo'jayev",
+    "Fee": 1200.0
+  }
+]

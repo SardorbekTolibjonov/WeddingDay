@@ -1,8 +1,8 @@
-﻿using WeddingDay.Data.Repositories;
+﻿using WeddingDay.Domain.Entities;
+using WeddingDay.Data.Repositories;
 using WeddingDay.Service.Interfaces;
-using WeddingDay.Service.DTOs.ClientDtos;
-using WeddingDay.Domain.Entities;
 using WeddingDay.Service.Exceptions;
+using WeddingDay.Service.DTOs.ClientDtos;
 
 namespace WeddingDay.Service.Services
 {
@@ -12,8 +12,9 @@ namespace WeddingDay.Service.Services
         private long _id;
         Repository<Client> clientRepository = new Repository<Client>();
 
-        public async Task<ClientForResultDto> CreateAsync(ClientForResultDto dto)
+        public async Task<ClientForResultDto> CreateAsync(ClientForCreationDto dto)
         {
+            await GenerateId();
             var client = (await this.clientRepository.SelectAllAsync()).FirstOrDefault(c => c.Phone.ToLower() == dto.Phone.ToLower());
             if (client is not null)
                 throw new CustomException(404, "Client is already exsit");
@@ -23,6 +24,7 @@ namespace WeddingDay.Service.Services
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
                 Phone = dto.Phone,
+                Password = dto.Password,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -33,6 +35,7 @@ namespace WeddingDay.Service.Services
                 Id = _id,
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
+                Password = dto.Password,
                 Phone = dto.Phone,
             };
             return result;
@@ -50,6 +53,7 @@ namespace WeddingDay.Service.Services
                     Id= client.Id,
                     FirstName = client.FirstName,
                     LastName = client.LastName,
+                    Password= client.Password,
                     Phone = client.Phone,
                 };
                 result.Add(mapped);
@@ -68,6 +72,7 @@ namespace WeddingDay.Service.Services
                 Id = client.Id,
                 FirstName = client.FirstName,
                 LastName = client.LastName,
+                Password = client.Password,
                 Phone = client.Phone,
             };
             return mapped;
@@ -82,7 +87,7 @@ namespace WeddingDay.Service.Services
             return await this.clientRepository.DeleteAsync(id);
         }
 
-        public async Task<ClientForResultDto> UpdateAsync(ClientForResultDto dto)
+        public async Task<ClientForResultDto> UpdateAsync(ClientForUpdateDto dto)
         {
             var client = await this.clientRepository.SelectByIdAsync(dto.Id);
             if (client is null)
@@ -94,6 +99,7 @@ namespace WeddingDay.Service.Services
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
                 Phone = dto.Phone,
+                Password = dto.Password,
                 UpdatedAt = DateTime.UtcNow
             };
 
@@ -104,6 +110,7 @@ namespace WeddingDay.Service.Services
                 Id = dto.Id,
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
+                Password = dto.Password,
                 Phone = dto.Phone,
             };
             return result;
@@ -120,7 +127,17 @@ namespace WeddingDay.Service.Services
                 _id = ++res.Id;
             }
         }
+        public async Task<bool> Inspection(string password, string phone)
+        {
+            var clients = await this.clientRepository.SelectAllAsync();
 
+            foreach (var client in clients)
+            {
+                if((client.Phone.ToLower() == phone.ToLower()) && (client.Password.ToLower() == password.ToLower()))
+                   return true; 
+            }
+            return false;
+        }
     }
 }
 

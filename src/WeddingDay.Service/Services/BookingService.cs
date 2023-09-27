@@ -14,6 +14,8 @@ namespace WeddingDay.Service.Services
 
         public async Task<BookingForResultDto> CreateAsync(BookingForCreationDto dto)
         {
+            await GenerateIdAsync();
+
             var order = (await this.Repository.SelectAllAsync()).FirstOrDefault(o => o.WeddingAddress.ToLower() == dto.WeddingAddress.ToLower());
             if (order is not null)
                 throw new CustomException(400, "The wedding hal is already booked");
@@ -21,8 +23,8 @@ namespace WeddingDay.Service.Services
             {
                 Id = _id,
                 ClientId = dto.ClientId,
-                Cost = dto.Cost,
-                Singers = dto.Singers,
+                PaymentId = dto.PaymentId,
+                SingerId = dto.SingerId,
                 WeddingAddress = dto.WeddingAddress,
                 WeddingDate = dto.WeddingDate,
             };
@@ -31,8 +33,8 @@ namespace WeddingDay.Service.Services
             {
                 Id= _id,
                 ClientId = dto.ClientId,
-                Cost = dto.Cost,
-                Singers = dto.Singers,
+                PaymentId = dto.PaymentId,
+                SingerId = dto.SingerId,
                 WeddingAddress = dto.WeddingAddress,
                 WeddingDate = dto.WeddingDate
                 
@@ -60,8 +62,8 @@ namespace WeddingDay.Service.Services
                 {
                     Id = order.Id,
                     ClientId = order.ClientId,
-                    Cost = order.Cost,
-                    Singers = order.Singers,
+                    PaymentId = order.PaymentId,
+                    SingerId = order.SingerId,
                     WeddingAddress= order.WeddingAddress,
                     WeddingDate= order.WeddingDate
                 };
@@ -80,8 +82,8 @@ namespace WeddingDay.Service.Services
             {
                 Id = id,
                 ClientId = result.ClientId,
-                Cost = result.Cost,
-                Singers = result.Singers,
+                PaymentId = result.PaymentId,
+                SingerId = result.SingerId,
                 WeddingAddress= result.WeddingAddress,
                 WeddingDate= result.WeddingDate
 
@@ -99,8 +101,8 @@ namespace WeddingDay.Service.Services
             {
                 Id=dto.Id,
                 ClientId=dto.ClientId,
-                Cost=dto.Cost,
-                Singers = dto.Singers,
+                PaymentId=dto.PaymentId,
+                SingerId = dto.SingerId,
                 WeddingAddress = dto.WeddingAddress,
                 WeddingDate = dto.WeddingDate,
                 UpdatedAt  = DateTime.UtcNow
@@ -112,8 +114,8 @@ namespace WeddingDay.Service.Services
             {
                 Id = dto.Id,
                 ClientId = dto.ClientId,
-                Cost = dto.Cost,
-                Singers = dto.Singers,
+                PaymentId=dto.PaymentId,
+                SingerId = dto.SingerId,
                 WeddingDate = dto.WeddingDate,
                 WeddingAddress = dto.WeddingAddress
             };
@@ -130,6 +132,17 @@ namespace WeddingDay.Service.Services
                 var res = result[result.Count - 1];
                 _id = ++res.Id;
             }
+        }
+        public async Task<bool> Inspection(string date, string address)
+        {
+            var orders = await this.Repository.SelectAllAsync();
+
+            foreach (var order in orders)
+            {
+                if((order.WeddingDate.ToLower() == date.ToLower()) || (order.WeddingAddress.ToLower() == address.ToLower()))
+                    return false;
+            }
+            return true;
         }
     }
 }

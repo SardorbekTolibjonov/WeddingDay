@@ -3,3 +3,13 @@ D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\Wedd
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.AssemblyInfoInputs.cache
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.AssemblyInfo.cs
 D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.csproj.CoreCompileInputs.cache
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\bin\Debug\net7.0\WeddingDay.Data.deps.json
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\bin\Debug\net7.0\WeddingDay.Data.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\bin\Debug\net7.0\WeddingDay.Data.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\bin\Debug\net7.0\WeddingDay.Domain.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\bin\Debug\net7.0\WeddingDay.Domain.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.csproj.CopyComplete
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\refint\WeddingDay.Data.dll
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\WeddingDay.Data.pdb
+D:\visual studio c#\Amalyot\WeddingDay\src\WeddingDay.Data\obj\Debug\net7.0\ref\WeddingDay.Data.dll

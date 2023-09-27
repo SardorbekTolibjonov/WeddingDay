@@ -1,1 +1,11 @@
-﻿
+[
+  {
+    "FirstName": "Sardorbek",
+    "LastName": "Tolibjonov",
+    "Phone": "900559343",
+    "Password": "55555",
+    "Id": 1,
+    "CreatedAt": "2023-09-27T06:20:02.5450953Z",
+    "UpdatedAt": "2023-09-27T06:20:02.5445775Z"
+  }
+]

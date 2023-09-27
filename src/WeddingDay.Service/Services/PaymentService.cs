@@ -3,22 +3,26 @@ using WeddingDay.Data.Repositories;
 using WeddingDay.Service.Exceptions;
 using WeddingDay.Service.Interfaces;
 using WeddingDay.Service.DTOs.PaymentDtos;
+using WeddingDay.Data.IRepositories;
 
 namespace WeddingDay.Service.Services
 {
     public class PaymentService : IPaymentService
-    {
+    { 
         private long _id;
         Repository<Payment> paymentRepository = new Repository<Payment>();
-        public async Task<PaymentForResultDto> CreateAsync(PaymentForResultDto dto)
+        public async Task<PaymentForResultDto> CreateAsync(PaymentForCreationDto dto)
         {
+            await GenerateIdAsync();
+
             var payment = (await this.paymentRepository.SelectAllAsync()).FirstOrDefault(p => p.Amount == dto.Amount);
-            if (payment == null)
+            if (payment is not null)
                 throw new CustomException(400, "Payment is already exist");
             var mapped = new Payment()
             {
                 Id = _id,
                 Amount = dto.Amount,
+                Phone = dto.Phone,
             };
 
             await this.paymentRepository.InsertAsync(mapped);
@@ -26,7 +30,10 @@ namespace WeddingDay.Service.Services
             {
                 Id = _id,
                 Amount = dto.Amount,
+                Phone = dto.Phone
             };
+            
+            
             return result;
         }
 
@@ -41,6 +48,7 @@ namespace WeddingDay.Service.Services
 
         public async Task<List<PaymentForResultDto>> GetAllAsync()
         {
+
             var payments = await this.paymentRepository.SelectAllAsync();
             var result = new List<PaymentForResultDto>();
             foreach (var payment in payments)
@@ -49,6 +57,7 @@ namespace WeddingDay.Service.Services
                 {
                     Id= payment.Id,
                     Amount = payment.Amount,
+                    Phone= payment.Phone,
                 };
                 result.Add(mapped);
             }
@@ -66,12 +75,13 @@ namespace WeddingDay.Service.Services
             {
                 Id = payment.Id,
                 Amount = payment.Amount,
+                Phone = payment.Phone,
             };
 
             return result;
         }
 
-        public async Task<PaymentForResultDto> UpdateAsync(PaymentForResultDto dto)
+        public async Task<PaymentForResultDto> UpdateAsync(PaymentForUpdateDto dto)
         {
             var payment = await this.paymentRepository.SelectByIdAsync(dto.Id);
             if (payment is null)
@@ -81,6 +91,7 @@ namespace WeddingDay.Service.Services
             {
                 Id = dto.Id,
                 Amount = dto.Amount,
+                Phone = dto.Phone,
                 UpdatedAt = DateTime.UtcNow,
             };
 
@@ -90,10 +101,11 @@ namespace WeddingDay.Service.Services
             {
                  Id = dto.Id,
                  Amount = dto.Amount,
+                 Phone = dto.Phone,
             };
             return result;
         }
-        public async Task GenerateId()
+        public async Task GenerateIdAsync()
         {
             var result = await this.paymentRepository.SelectAllAsync();
             if (result.Count == 0)

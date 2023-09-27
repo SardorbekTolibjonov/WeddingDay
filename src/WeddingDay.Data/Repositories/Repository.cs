@@ -11,14 +11,16 @@ namespace WeddingDay.Data.Repositories
         private readonly string Path;
         public Repository() 
         {
-            if (typeof(TEntity) == typeof(Booking))
+            if (typeof(Booking) == typeof(TEntity))
                 this.Path = DatabasesPath.BookingDb;
-            else if(typeof(TEntity) == typeof(ClientForCreationDto))
+            else if(typeof(Client) == typeof(TEntity))
                 this.Path = DatabasesPath.ClientDb;
-            else if(typeof(TEntity) == typeof(Payment))
+            else if(typeof(Payment) == typeof(TEntity))
                 this.Path = DatabasesPath.PaymentDb;
-            else if(typeof(TEntity) == typeof(Wedding))
+            else if(typeof(Wedding) == typeof(TEntity))
                 this.Path = DatabasesPath.WeddingDb;
+            else if (typeof(Singer) == typeof(TEntity))
+                this.Path= DatabasesPath.SingerDb;
 
             var str = File.ReadAllText(Path);
 

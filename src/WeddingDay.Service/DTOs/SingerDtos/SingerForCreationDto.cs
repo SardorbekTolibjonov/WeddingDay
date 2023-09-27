@@ -2,7 +2,7 @@
 {
     public class SingerForCreationDto
     {
-        public string Name { get; set; }
-        public decimal Charge { get; set; }
+        public string Neme {  get; set; }
+        public decimal Fee { get; set; }
     }
 }
